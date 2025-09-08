@@ -1,0 +1,26 @@
+[project]
+name = "todolist-bot"
+version = "0.1.0"
+authors = [{name = "Yakov Shepelev",email = "yasha.shepeleff@gmail.com"}]
+readme = "README.md"
+requires-python = ">=3.10, <3.11"
+dependencies = ["aiogram (==2.25.1)", "python-dotenv (>=1.1.1,<2.0.0)", "sqlalchemy (>=2.0.43,<3.0.0)", "psycopg2 (>=2.9.10,<3.0.0)", "db (>=0.1.1,<0.2.0)"]
+
+[tool.poetry]
+package-mode = false
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.0"
+isort = "^5.13.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ["py312"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
